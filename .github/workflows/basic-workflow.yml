@@ -46,7 +46,11 @@ jobs:
         
       
       - name: Run a private composite action
+        id: foo
         uses: ./.github/actions/hello-expedia5-composite-action
         with:
           who-to-greet: 'Mona the Octocat with Expedia'
+
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: bash
 
