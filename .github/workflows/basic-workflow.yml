@@ -42,6 +42,7 @@ jobs:
         with:
           repository: 'im-sandbox-mikaelt/hello-expedia5-composite-action'
           path: ./.github/actions/hello-expedia5-composite-action
+          token: ${{ secrets.GH_TOKEN }}
         
       
       - name: Run a private composite action
